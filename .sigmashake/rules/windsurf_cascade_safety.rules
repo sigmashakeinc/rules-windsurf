@@ -24,6 +24,5 @@ rule audit-skill-modification {
   OR path GLOB "**/.windsurf/config.json"
   severity warning
   priority 95
-  ASK write
-  PROMPT "The agent is trying to modify its own skills or configuration. Allow?"
+  LOG write
 }
